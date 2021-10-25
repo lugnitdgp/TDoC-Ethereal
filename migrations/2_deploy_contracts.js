@@ -1,5 +1,5 @@
-var Demo = artifacts.require("./Demo.sol");
+var Banking = artifacts.require("./Banking.sol");
 
 module.exports = function (deployer) {
-  deployer.deploy(Demo);
+  deployer.deploy(Banking);
 };
