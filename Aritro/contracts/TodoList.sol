@@ -7,18 +7,18 @@ uint public count=0;
 
 
 struct Todo{
-    bytes32 info;
+    string info;
     uint serialNumber;
 }
   
-mapping(uint=>Todo) todos;
+mapping(uint=>Todo) public todos;
 
-  function addTodo(bytes32 _info) public {
+  function addTodo(string memory  _info) public {
 
       count++;
 
       todos[count]=Todo(_info,count);
-      
+
   }
 
 

@@ -12,6 +12,9 @@ const App = () => {
   const[account, setAccount] = useState(undefined)
   const[web3, setWeb3] = useState(undefined)
 
+  const[info,setInfo]=useState("")
+
+
 
   //const[storageValue, setStorageValue] = useState(undefined)
 
@@ -45,7 +48,19 @@ const App = () => {
 
 
     useEffect(() => {
-      const getContractDetails = async () => {};
+      const getContractDetails = async () => {
+
+        await contract.methods.count().call()
+        .then((result)=>{
+          console.log(result)
+        })
+
+        .catch((err)=>{
+          console.log(err)
+        })
+
+
+      };
       if(
         typeof contract !== "undefined" &&
         typeof account !== "undefined" &&
@@ -55,13 +70,32 @@ const App = () => {
         console.log(contract)
         console.log(account)
         console.log(web3)
+
+
         getContractDetails();
       }
     }, [web3, account, contract])
   
+    const handleSubmit=async(e)=>{
+      e.preventDefault()
+      await contract.methods.addTodo(info).send({from:account})
+      .then((res)=>{
+       console.log(res)
+      })
+      .catch((err)=>{
+        console.log(err)
+      })
+
+
+
+    }
+
+
+
   if (web3)  
     return (
       <div className="App">
+        {/*
         <h1>Good to Go!</h1>
         <p>Your Truffle Box is installed and ready.</p>
         <h2>Smart Contract Example</h2>
@@ -72,6 +106,14 @@ const App = () => {
         <p>
           Try changing the value stored on <strong>line 42</strong> of App.js.
         </p>
+        */}
+        <form>
+          <input type = "text" value={info} onChange={(e)=>setInfo(e.target.value)}/>
+
+
+          <button onClick={handleSubmit}>Submit</button> 
+
+        </form>
         
       </div>
 
