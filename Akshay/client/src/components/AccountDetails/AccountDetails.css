@@ -1,0 +1,27 @@
+.info-container{
+    /* border: 10px solid rgb(238, 155, 155) ; */
+    background: linear-gradient(-45deg, #ee7752, #d6799d, #42a5c9, #23d5ab);
+    animation: gradient 5s ease infinite;
+    margin: auto;
+    border-radius: 10px;
+}
+
+.main-info{
+    font-size: small;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 5px;
+    align-items: left;
+}
+
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
