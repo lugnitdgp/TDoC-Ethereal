@@ -13,7 +13,13 @@ struct Todo{
   
 mapping(uint=>Todo) todos;
 
-  
+  function addTodo(bytes32 _info) public {
+
+      count++;
+
+      todos[count]=Todo(_info,count);
+      
+  }
 
 
 }
