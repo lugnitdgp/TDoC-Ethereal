@@ -1,0 +1,130 @@
+{
+  "contractName": "TodoList",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/SimpleStorage.sol\":\"TodoList\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/SimpleStorage.sol\":{\"keccak256\":\"0x4db5ca788e29e93a41c6edcf3642dd4974d69583cef53e8ad54f8caa63d191d4\",\"urls\":[\"bzz-raw://1e273e2a2bd5e38a0632c6881699b379214da60817208900af27425a558d5dc8\",\"dweb:/ipfs/QmdN8NMDUX1Tz2RSSDscdn1LXFjw8LghWL792EoGKB7EWe\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603e80601d6000396000f3fe6080604052600080fdfea265627a7a72315820c9d05274ab56d11a58d3002618ba7c0d2c403f1766262f6a06cbd3325f5aa15864736f6c63430005100032",
+  "deployedBytecode": "0x6080604052600080fdfea265627a7a72315820c9d05274ab56d11a58d3002618ba7c0d2c403f1766262f6a06cbd3325f5aa15864736f6c63430005100032",
+  "sourceMap": "66:24:1:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;66:24:1;;;;;;;",
+  "deployedSourceMap": "66:24:1:-;;;;;",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity >=0.4.21 <0.7.0;\n\ncontract TodoList {\n  \n}\n",
+  "sourcePath": "C:\\Users\\Aritro\\Desktop\\ethereum\\contracts\\SimpleStorage.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/SimpleStorage.sol",
+    "exportedSymbols": {
+      "TodoList": [
+        39
+      ]
+    },
+    "id": 40,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 38,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".21",
+          "<",
+          "0.7",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:32:1"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 39,
+        "linearizedBaseContracts": [
+          39
+        ],
+        "name": "TodoList",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 40,
+        "src": "66:24:1"
+      }
+    ],
+    "src": "32:59:1"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/contracts/SimpleStorage.sol",
+      "exportedSymbols": {
+        "TodoList": [
+          39
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            ">=",
+            "0.4",
+            ".21",
+            "<",
+            "0.7",
+            ".0"
+          ]
+        },
+        "id": 38,
+        "name": "PragmaDirective",
+        "src": "32:32:1"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            39
+          ],
+          "name": "TodoList",
+          "nodes": [
+            null
+          ],
+          "scope": 40
+        },
+        "id": 39,
+        "name": "ContractDefinition",
+        "src": "66:24:1"
+      }
+    ],
+    "id": 40,
+    "name": "SourceUnit",
+    "src": "32:59:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0x8a4Da780Ab6b30511d8255EB36076810A3C68a12",
+      "transactionHash": "0x009708d03a44cdf940397d5074eb0388c71487c8d36fd660ba5a8d752bbd5642"
+    }
+  },
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2021-10-27T15:38:35.666Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
