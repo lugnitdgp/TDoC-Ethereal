@@ -1,0 +1,30 @@
+.input-field{
+    margin: 10px;
+    border-radius: 5px;
+    width: 300px;
+    height: 40px;
+}
+
+body {
+	background: linear-gradient(-45deg, #ee7752, #d6799d, #42a5c9, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 5s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.info{
+    color: rgb(56, 37, 66);
+    padding: 25px;
+}
