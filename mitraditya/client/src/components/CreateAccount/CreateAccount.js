@@ -4,6 +4,7 @@ import BankingContract from "../../contracts/Banking.json";
 // import BankingContract from "./contracts/Banking.json";
 import getWeb3 from "../../getWeb3";
 import "./CreateAccount.css";
+import Navigate from '../Navbar/Navbar';
 
 const CreateAccount = () => {
       const [contract, setContract] = useState(undefined);
@@ -47,28 +48,29 @@ const CreateAccount = () => {
     getBasicDetails();
   }, []);
 
-//   useEffect(() => {
-//     const getContractDetails = async () => {
-//       await contract.methods.c().call()
-//         .then((result) => {
-//           console.log(result);
-//         })
+  useEffect(() => {
+    const getContractDetails = async () => {}
+      // await contract.methods.createAccount().call()
+    //     .then((result) => {
+    //       console.log(result);
+    //     })
 
-//         .catch((error) => {
-//           console.log(error);
-//         });
-//     };
-//     if (
-//       typeof contract !== "undefined" &&
-//       typeof account !== "undefined" &&
-//       typeof web3 !== "undefined"
-//     ) {
-//       console.log(contract);
-//       console.log(account);
-//       console.log(web3);
-//       getContractDetails();
-//     }
-//   }, [web3, account, contract]);
+    //     .catch((error) => {
+    //       console.log(error);
+    //     });
+    // };
+    if (
+      typeof contract !== "undefined" &&
+      typeof account !== "undefined" &&
+      typeof web3 !== "undefined"
+    ) {
+      console.log(contract);
+      console.log(account);
+      console.log(web3);
+      web3.eth.defaultAccount=account;
+      getContractDetails();
+    }
+  }, [web3, account, contract]);
 
 
   const handleSubmit=async (e)=>{
@@ -82,9 +84,17 @@ const CreateAccount = () => {
           .send(
               {
                   from:account,
-                  to:contract.options.address
+                  to:contract.options.address,
+                  value: web3.utils.toWei('2','ether'),
               }
           )
+          .then((res)=>{
+            console.log(res);
+            window.location.href="/accounts"
+          })
+          .catch((err)=>{
+            console.log(err);
+          });
       }
 
   }

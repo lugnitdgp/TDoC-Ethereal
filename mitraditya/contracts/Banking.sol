@@ -12,10 +12,22 @@ contract Banking {
         uint256 createdAt;
         string name;
         string location;
-        address payable creator;
+        address creator;
         uint256 balance;
         bool doesExist;
     }
+
+    constructor() public{
+        accounts[0]=Account(
+            0,
+            block.timestamp,
+            "Ethereal",
+            "NIT Durgapur",
+            address(this),
+            2,
+            true
+            );
+        }
 
     mapping(uint256 => Account) public accounts;
 
@@ -23,9 +35,18 @@ contract Banking {
     //     return demostring;
     // }
 
-    function createAccount(string memory name,string memory location,address payable _creator) public payable {
+    function createAccount(string memory name,string memory location,address payable _creator)
+        public payable{
+            if(_creator.balance>=3)
+            {
         serialNumber++; 
-        accounts[serialNumber] = Account(serialNumber,block.timestamp,name,location,_creator,2,true);
+                accounts[serialNumber] = Account(serialNumber,block.timestamp,name,location,_creator,2,true);
+            bankBalance+=2;
+        }
+        else{
+            revert("Insufficient funds");
+        }
+        
     }
 
     // function getContractBalance()
