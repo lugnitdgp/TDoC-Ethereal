@@ -26,6 +26,7 @@ const Navbar = () => {
                         </a>
                     </ul>
                 </div>
+                <hr/>
             </div>
     )
 }

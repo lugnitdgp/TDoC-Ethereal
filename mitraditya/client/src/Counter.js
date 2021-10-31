@@ -1,7 +1,12 @@
 import React, { Component } from "react";
 
 class App extends Component {
-  state = {count: 0}
+  constructor(props) {
+    super(props);
+    this.state = {
+      count: 0,
+    };
+  }
 
   f1 = () => {
     this.setstate({ count: this.state.count + 1 });
@@ -14,10 +19,10 @@ class App extends Component {
     return (
       <div>
         <button type="button" onClick="function1()">
-          click to increment the value
+          click to increment
         </button>
         <button type="button" onClick="function2()">
-          click to Decrement the value
+          click to Decrement
         </button>
         <h1>{this.state.count}</h1>
       </div>

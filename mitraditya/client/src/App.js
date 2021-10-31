@@ -10,11 +10,15 @@ import "./App.css";
 const App = () => {
 
     return (
+      
       <div className="App">
         <Navbar/>
         <Routing/>
       </div>
     );
+  // else {
+  //   return null;
+  // }
 };
 
 export default App;

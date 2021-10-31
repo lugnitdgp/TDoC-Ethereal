@@ -49,9 +49,27 @@ contract Banking {
         
     }
 
+function addBal(uint _serial, uint amount, address payable creator) 
+public payable 
+{
+    if(creator.balance>=amount/1000000000000000000+1)
+    {
+        accounts[_serial].balance+=amount/1000000000000000000;
+        bankBalance+=amount/1000000000000000000;
+    }else{
+        revert("Insufficient funds");
+    }
+}
+function withdrawBal(uint _serial, uint amount, address payable creator) 
+public payable 
+{
+    if(creator.balance>=amount/1000000000000000000+1)
+    {
+        accounts[_serial].balance-=amount/1000000000000000000;
+        bankBalance-=amount/1000000000000000000;
+    }else{
+        revert("Insufficient funds");
+    }
+}
     // function getContractBalance()
-    //     // function display(int256 ind) public view returns (string memory, int) {
-    //     todo storage todos= todos[ind];
-    //     return (todos.todo_name, todos.counter);
-    // }
 }
