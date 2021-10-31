@@ -1,6 +1,5 @@
 import React from 'react';
-import "./Navbar.css";
-import { Navbar, Nav } from 'react-bootstrap';
+import "./Nav.css";
 
 const Navigate = () => {
     return (
@@ -14,12 +13,15 @@ const Navigate = () => {
                 </div>
                 <div className="list">
                     <ul>
-                        <a href="/"/>
+                        <a href="/">
                             <li className="navlist">HOME</li>
-                        <a href="/accounts"/>
+                        </a>
+                        <a href="/accounts">
                             <li className="navlist">ACCOUNTS</li>
-                        <a href="/create"/>
+                            </a>
+                        <a href="/create">
                             <li className="navlist">CREATE ACCOUNT</li>
+                            </a>
                     </ul>
                     
                 </div>
